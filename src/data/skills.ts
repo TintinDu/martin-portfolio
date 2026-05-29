@@ -33,7 +33,7 @@ export const SKILL_CATEGORIES: readonly SkillCategory[] = [
     title: "DATA",
     subtitle: "MongoDB · PostgreSQL",
     items: [
-      { index: "01", title: "MongoDB / Mongoose", level: "Intermediate" },
+      { index: "01", title: "MongoDB / Mongoose", level: "Advanced" },
       { index: "02", title: "PostgreSQL", level: "Intermediate" },
       { index: "03", title: "Prisma ORM", level: "Intermediate" },
     ],

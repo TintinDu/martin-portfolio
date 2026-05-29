@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# martin-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Martin Dubois Cousiño — full-stack developer.
 
-Currently, two official plugins are available:
+**[→ Live demo](https://martin-portfolio.vercel.app)** · [GitHub](https://github.com/TintinDu/martin-portfolio) · [LinkedIn](https://www.linkedin.com/in/martin-dubois-cousino-80196218a) · martindubois1602@gmail.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Inspired by the UI of Persona 3 (JRPG): skewed clip-path panels, cyan/red palette, keyboard-driven navigation, and animated page transitions.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript + Vite 8
+- Framer Motion — page transitions
+- CSS Modules — scoped styles, no CSS-in-JS
+- React Router v7 — client-side routing with lazy-loaded pages
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Route | Description |
+|---|---|
+| `/` | Main menu — keyboard navigation (↑ ↓ ↵) |
+| `/about` | Background & journey — character selection style |
+| `/skills` | Tech stack — RPG ranked card list |
+| `/projects` | Side projects with GitHub links |
+| `/socials` | GitHub & LinkedIn |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Running locally
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Requires Node 22+ (see `.nvmrc`).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+nvm use
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Architecture
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── constants/   # Design tokens (colors, timings, z-index) + route paths
+├── data/        # All content as typed TS config files
+├── hooks/       # useKeyboardNav, useMountDelay
+├── components/  # Shared UI: PageScreen, PageTransition, SkewBar, RedStripe, KeyHint
+├── pages/       # One folder per route, each ~100 lines max
+└── types/       # Shared TypeScript interfaces
+```
+
+Key decisions:
+- CSS custom properties defined in `index.html` to guarantee load order before CSS Modules
+- All page data lives in `src/data/` — zero hardcoded content in components
+- Keyboard navigation centralized in `useKeyboardNav` with `preventDefault()` on arrow keys
+- Routes lazy-loaded with `React.lazy` + `Suspense`

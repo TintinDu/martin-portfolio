@@ -26,7 +26,11 @@ export default function Socials(): React.JSX.Element {
     const link = SOCIAL_LINKS[active];
     if (!link) return;
     try {
-      window.open(link.url, '_blank', 'noopener,noreferrer');
+      if (link.url.startsWith('mailto:')) {
+        window.location.href = link.url;
+      } else {
+        window.open(link.url, '_blank', 'noopener,noreferrer');
+      }
     } catch {
       /* silent fail */
     }

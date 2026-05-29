@@ -17,4 +17,12 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
     description: 'Professional profile',
     iconKey: 'linkedin',
   },
+  {
+    id: 'email',
+    label: 'EMAIL',
+    handle: 'martindubois1602@gmail.com',
+    url: 'mailto:martindubois1602@gmail.com',
+    description: 'Drop me a message',
+    iconKey: 'email',
+  },
 ] as const;

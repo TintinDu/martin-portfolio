@@ -7,7 +7,11 @@ interface SocialInfoRowsProps {
 
 function openLink(url: string): void {
   try {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (url.startsWith('mailto:')) {
+      window.location.href = url;
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   } catch {
     /* silent fail */
   }

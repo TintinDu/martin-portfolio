@@ -76,7 +76,7 @@ export default function Menu(): React.JSX.Element {
         <KeyHint hints={KEY_HINTS} />
 
         <div className={styles.infoLine} aria-hidden="true">
-          Full-stack developer · TypeScript · React · NestJS
+          Full-stack developer since 2022 · TypeScript · React · NestJS
         </div>
       </PageScreen>
     </PageTransition>
