@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { ROUTES } from './constants/routes';
 
 const Menu = lazy(() => import('./pages/Menu/Menu'));
@@ -27,6 +28,7 @@ export default function App(): React.JSX.Element {
           <Route path={ROUTES.socials} element={<Socials />} />
         </Routes>
       </AnimatePresence>
+      <Analytics />
     </Suspense>
   );
 }
