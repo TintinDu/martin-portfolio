@@ -9,10 +9,7 @@ interface MenuRowProps {
   onClick: () => void;
 }
 
-export function MenuRow({ item, active, index, totalItems, onClick }: MenuRowProps): React.JSX.Element {
-  const dist = Math.abs(index - (active === true ? index : index));
-  const scale = active ? 1.06 : Math.max(0.72, 1 - dist * 0.08);
-
+export function MenuRow({ item, active, onClick }: Omit<MenuRowProps, 'index' | 'totalItems'>): React.JSX.Element {
   return (
     <div
       className={styles.row}
@@ -24,16 +21,8 @@ export function MenuRow({ item, active, index, totalItems, onClick }: MenuRowPro
       onClick={onClick}
       onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }}
       style={{
-        transform: `
-          translateX(${item.offsetX}px)
-          translateY(${item.offsetY}px)
-          skewX(${item.skewX}deg)
-          skewY(${item.skewY}deg)
-          scale(${scale})
-        `,
-        marginBottom: active
-          ? `${8 + totalItems * 2}px`
-          : `${4}px`,
+        transform: `translateX(${item.offsetX}px) skewX(${item.skewX}deg)`,
+        marginBottom: active ? '12px' : '4px',
       }}
     >
       <div className={styles.glowBar} aria-hidden="true" />

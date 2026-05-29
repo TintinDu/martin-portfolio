@@ -7,7 +7,7 @@ export const PROJECTS: readonly Project[] = [
     description:
       'This site. A Persona 3 JRPG-inspired portfolio built with React 19, TypeScript, Framer Motion, and CSS Modules. Keyboard-driven navigation, skewed clip-path panels, and full page transitions.',
     tags: ['React 19', 'TypeScript', 'Framer Motion', 'CSS Modules', 'Vite'],
-    githubUrl: 'https://github.com/martindubois1602/martin-portfolio',
+    githubUrl: 'https://github.com/TintinDu/martin-portfolio',
     year: 2025,
     status: 'live',
   },

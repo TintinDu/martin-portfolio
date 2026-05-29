@@ -12,7 +12,7 @@
   font-size: clamp(64px, 8vw, 108px);
   line-height: 0.88;
   letter-spacing: 2px;
-  color: rgba(10, 10, 14, 0.72);
+  color: rgba(60, 226, 255, 0.08);
   transform: rotate(18deg);
   transform-origin: left top;
   user-select: none;

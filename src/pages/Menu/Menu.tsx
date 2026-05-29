@@ -64,8 +64,6 @@ export default function Menu(): React.JSX.Element {
               key={item.id}
               item={item}
               active={i === active}
-              index={i}
-              totalItems={MENU_ITEMS.length}
               onClick={() => {
                 setActive(i);
                 handleConfirm();
