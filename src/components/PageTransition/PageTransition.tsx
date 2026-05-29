@@ -1,4 +1,3 @@
-import { EASING, TRANSITION } from '../../constants/design';
 import { DefaultTransition } from './transitions/DefaultTransition';
 import { AboutTransition } from './transitions/AboutTransition';
 import { SkillsTransition } from './transitions/SkillsTransition';
