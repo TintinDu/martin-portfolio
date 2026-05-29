@@ -1,25 +1,26 @@
 .screen {
   position: relative;
+  overflow: hidden;
 }
 
 .nameTag {
   position: absolute;
-  top: 18px;
-  left: 22px;
+  top: 0px;
+  left: 6vw;
   z-index: var(--z-overlay);
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(40px, 8vw, 108px);
+  font-size: clamp(32px, 5vw, 76px);
   line-height: 0.88;
   letter-spacing: 2px;
-  color: rgba(60, 226, 255, 0.08);
+  color: rgba(60, 226, 255, 0.07);
   transform: rotate(18deg);
   transform-origin: left top;
   user-select: none;
   pointer-events: none;
   text-shadow:
-    2px 2px 0 rgba(196, 0, 26, 0.18),
-    -1px -1px 0 rgba(60, 226, 255, 0.08);
+    2px 2px 0 rgba(196, 0, 26, 0.14),
+    -1px -1px 0 rgba(60, 226, 255, 0.06);
 }
 
 .nameTag span {
@@ -28,7 +29,7 @@
 
 .nav {
   position: absolute;
-  left: 6vw;
+  left: 8vw;
   top: 50%;
   transform: translateY(-50%);
   z-index: var(--z-nav);

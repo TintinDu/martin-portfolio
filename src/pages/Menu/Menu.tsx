@@ -50,9 +50,9 @@ export default function Menu(): React.JSX.Element {
           className={styles.nameTag}
           aria-hidden="true"
         >
-          <span>martin</span>
-          <span>dubois</span>
-          <span>cousiño</span>
+          <span>Martin</span>
+          <span>Dubois</span>
+          <span>Cousiño</span>
         </div>
 
         <nav
