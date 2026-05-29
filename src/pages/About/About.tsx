@@ -19,7 +19,7 @@ const CHAR_IMAGES = [char1, char2, char3] as const;
 
 const KEY_HINTS = [
   { keys: ['↑', '↓'], label: 'Select' },
-  { keys: ['↵'], label: 'Reveal' },
+  { keys: ['↵'], label: 'Open' },
   { keys: ['←'], label: 'Back' },
 ];
 
@@ -77,12 +77,8 @@ export default function About(): React.JSX.Element {
                 active={i === active}
                 imageSrc={CHAR_IMAGES[section.charIndex]}
                 onClick={() => {
-                  if (i === active) {
-                    setRevealed(true);
-                  } else {
-                    setActive(i);
-                    setRevealed(false);
-                  }
+                  setActive(i);
+                  setRevealed(true);
                 }}
               />
             ))}
@@ -93,7 +89,7 @@ export default function About(): React.JSX.Element {
               <AboutRevealPanel section={activeSection} />
             ) : (
               <div className={styles.emptyRight} aria-hidden="true">
-                Press ↵ to reveal
+                Select a section
               </div>
             )}
           </div>

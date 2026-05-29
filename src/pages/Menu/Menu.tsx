@@ -68,6 +68,7 @@ export default function Menu(): React.JSX.Element {
                 setActive(i);
                 handleConfirm();
               }}
+              onHover={() => setActive(i)}
             />
           ))}
         </nav>

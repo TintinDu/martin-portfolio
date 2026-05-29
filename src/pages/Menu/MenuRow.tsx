@@ -4,12 +4,11 @@ import styles from './MenuRow.module.css';
 interface MenuRowProps {
   item: MenuItem;
   active: boolean;
-  index: number;
-  totalItems: number;
   onClick: () => void;
+  onHover: () => void;
 }
 
-export function MenuRow({ item, active, onClick }: Omit<MenuRowProps, 'index' | 'totalItems'>): React.JSX.Element {
+export function MenuRow({ item, active, onClick, onHover }: MenuRowProps): React.JSX.Element {
   return (
     <div
       className={styles.row}
@@ -19,6 +18,7 @@ export function MenuRow({ item, active, onClick }: Omit<MenuRowProps, 'index' | 
       aria-label={item.label}
       aria-current={active ? 'true' : undefined}
       onClick={onClick}
+      onMouseEnter={onHover}
       onKeyDown={(e) => { if (e.key === 'Enter') onClick(); }}
       style={{
         transform: `translateX(${item.offsetX}px) skewX(${item.skewX}deg)`,
