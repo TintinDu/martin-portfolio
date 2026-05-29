@@ -69,8 +69,10 @@
   }
 
   .infoLine {
-    font-size: 9px;
-    letter-spacing: 2px;
-    bottom: 16px;
+    display: none;
+  }
+
+  .claudeLine {
+    display: none;
   }
 }

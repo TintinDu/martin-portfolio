@@ -33,3 +33,23 @@
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0;
 }
+
+@media (max-width: 768px) {
+  .root {
+    right: 12px;
+    bottom: 12px;
+    gap: 10px;
+  }
+
+  .hint {
+    font-size: 10px;
+    letter-spacing: 1px;
+    gap: 4px;
+  }
+
+  .key {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+}
