@@ -1,0 +1,63 @@
+.bar {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 8px;
+  cursor: pointer;
+  min-height: 80px;
+  transition: transform var(--timing-fast) var(--ease-spring);
+}
+
+.accent {
+  width: 4px;
+  flex-shrink: 0;
+  background: var(--color-red);
+  opacity: 0.5;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 92%);
+  transition:
+    background var(--timing-fast) var(--ease-spring),
+    opacity var(--timing-fast) var(--ease-spring);
+}
+
+.bar[data-active='true'] .accent {
+  background: var(--color-cyan);
+  opacity: 1;
+  box-shadow: 0 0 10px var(--color-cyan);
+}
+
+.body {
+  flex: 1;
+  background: #0e0e14;
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  padding: 14px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  transition: background var(--timing-fast) var(--ease-spring);
+}
+
+.bar[data-active='true'] .body {
+  background: #151525;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  transition: color var(--timing-fast) var(--ease-spring);
+}
+
+.bar[data-active='true'] .label {
+  color: var(--color-cyan);
+  text-shadow: 0 0 16px rgba(60, 226, 255, 0.4);
+}
+
+.handle {
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}

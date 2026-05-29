@@ -1,0 +1,29 @@
+.root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.stripe {
+  height: 100%;
+  width: 10px;
+}
+
+.stripe:first-child {
+  background: var(--color-red);
+  opacity: 0.9;
+}
+
+.stripe:last-child {
+  background: color-mix(in srgb, var(--color-red) 60%, #ff88aa);
+  opacity: 0.6;
+  width: 6px;
+}

@@ -1,0 +1,85 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+  transition: transform var(--timing-fast) var(--ease-spring);
+  margin-bottom: 4px;
+}
+
+/* Badge */
+.badge {
+  width: 36px;
+  height: 52px;
+  background: var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--color-white);
+  flex-shrink: 0;
+  clip-path: polygon(0 0, 100% 8%, 100% 92%, 0 100%);
+  transition: background var(--timing-fast) var(--ease-spring);
+}
+
+.card[data-active='true'] .badge {
+  background: var(--color-red-bright);
+  box-shadow: 0 0 20px rgba(196, 0, 26, 0.5);
+}
+
+/* Main body */
+.body {
+  flex: 1;
+  background: #0e0e14;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 92%);
+  padding: 12px 20px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: background var(--timing-fast) var(--ease-spring);
+  min-height: 52px;
+  justify-content: center;
+}
+
+.card[data-active='true'] .body {
+  background: #161624;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  font-style: italic;
+  transition: color var(--timing-fast) var(--ease-spring);
+}
+
+.card[data-active='true'] .title {
+  color: var(--color-cyan);
+  text-shadow: 0 0 14px rgba(60, 226, 255, 0.4);
+}
+
+.subtitle {
+  font-family: var(--font-condensed);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+}
+
+/* Active indicator */
+.indicator {
+  width: 3px;
+  height: 100%;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+  opacity: 0;
+  transition: opacity var(--timing-fast) var(--ease-spring);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.card[data-active='true'] .indicator {
+  opacity: 1;
+}

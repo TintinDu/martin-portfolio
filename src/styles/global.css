@@ -1,0 +1,77 @@
+:root {
+  /* Colors */
+  --color-cyan: #3ce2ff;
+  --color-red: #c4001a;
+  --color-red-bright: #ff2a2a;
+  --color-red-glow: rgba(196, 0, 26, 0.18);
+  --color-pink-glow: rgba(255, 100, 180, 0.35);
+  --color-dark: #000;
+  --color-panel: #0a0a0e;
+  --color-white: #fff;
+  --color-cyan-dim: rgba(60, 226, 255, 0.55);
+  --color-cyan-glow: rgba(60, 226, 255, 0.22);
+
+  /* Fonts */
+  --font-display: 'Anton', sans-serif;
+  --font-condensed: 'Bebas Neue', sans-serif;
+  --font-body: 'Barlow Condensed', sans-serif;
+
+  /* Timing */
+  --timing-fast: 0.18s;
+  --timing-normal: 0.35s;
+  --timing-slow: 0.55s;
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-sharp: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1.0);
+
+  /* Z-index layers */
+  --z-bg: 0;
+  --z-bg-overlay: 1;
+  --z-panels: 6;
+  --z-nav: 10;
+  --z-overlay: 12;
+  --z-portrait: 13;
+  --z-footer: 14;
+  --z-transition: 999;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

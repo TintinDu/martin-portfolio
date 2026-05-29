@@ -1,0 +1,75 @@
+.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 48px;
+  gap: 16px;
+  animation: slideIn var(--timing-slow) var(--ease-spring) both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-style: italic;
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+.description {
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background: var(--color-red);
+}
+
+.openLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  border: 1px solid var(--color-cyan);
+  padding: 9px 20px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition:
+    background var(--timing-fast) var(--ease-spring),
+    color var(--timing-fast) var(--ease-spring);
+  width: fit-content;
+}
+
+.openLink:hover,
+.openLink:focus-visible {
+  background: var(--color-cyan);
+  color: var(--color-dark);
+}
+
+.handle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}

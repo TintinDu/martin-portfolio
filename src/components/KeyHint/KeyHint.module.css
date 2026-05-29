@@ -1,0 +1,35 @@
+.root {
+  position: absolute;
+  bottom: 20px;
+  right: 48px;
+  z-index: var(--z-footer);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-condensed);
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 11px;
+  font-family: var(--font-condensed);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0;
+}

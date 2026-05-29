@@ -1,0 +1,61 @@
+.screen {
+  position: relative;
+}
+
+.nameTag {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  z-index: var(--z-overlay);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(64px, 8vw, 108px);
+  line-height: 0.88;
+  letter-spacing: 2px;
+  color: rgba(10, 10, 14, 0.72);
+  transform: rotate(18deg);
+  transform-origin: left top;
+  user-select: none;
+  pointer-events: none;
+  text-shadow:
+    2px 2px 0 rgba(196, 0, 26, 0.18),
+    -1px -1px 0 rgba(60, 226, 255, 0.08);
+}
+
+.nameTag span {
+  display: block;
+}
+
+.nav {
+  position: absolute;
+  left: 10vw;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-nav);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navVisible {
+  opacity: 1;
+  transition: opacity var(--timing-slow) var(--ease-spring);
+}
+
+.navHidden {
+  opacity: 0;
+}
+
+/* Bottom info line */
+.infoLine {
+  position: absolute;
+  bottom: 24px;
+  left: 10vw;
+  z-index: var(--z-footer);
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.28);
+  text-transform: uppercase;
+  user-select: none;
+}
