@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageScreen } from '../../components/PageScreen/PageScreen';
 import { PageTransition } from '../../components/PageTransition/PageTransition';
-import { RedStripe } from '../../components/RedStripe/RedStripe';
+
 import { KeyHint } from '../../components/KeyHint/KeyHint';
 import { AboutBar } from './AboutBar';
 import { AboutRevealPanel } from './AboutRevealPanel';
@@ -13,9 +13,13 @@ import bgVideo from '../../assets/bg-video.mp4';
 import char1 from '../../assets/char1.png';
 import char2 from '../../assets/char2.png';
 import char3 from '../../assets/char3.png';
+import portraitMain from '../../assets/portrait-main.jpeg';
+import portraitAlt from '../../assets/portrait-alt.jpeg';
+import portraitF from '../../assets/portrait-f.jpeg';
 import styles from './About.module.css';
 
 const CHAR_IMAGES = [char1, char2, char3] as const;
+const PORTRAIT_IMAGES = [portraitMain, portraitAlt, portraitF] as const;
 
 const KEY_HINTS = [
   { keys: ['↑', '↓'], label: 'Select' },
@@ -86,7 +90,10 @@ export default function About(): React.JSX.Element {
 
           <div className={styles.right}>
             {revealed && activeSection ? (
-              <AboutRevealPanel section={activeSection} />
+              <AboutRevealPanel
+                section={activeSection}
+                portraitSrc={PORTRAIT_IMAGES[activeSection.portraitIndex]}
+              />
             ) : (
               <div className={styles.emptyRight} aria-hidden="true">
                 Select a section
@@ -95,7 +102,6 @@ export default function About(): React.JSX.Element {
           </div>
         </div>
 
-        <RedStripe />
         <KeyHint hints={KEY_HINTS} />
       </PageScreen>
     </PageTransition>

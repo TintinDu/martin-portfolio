@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageScreen } from '../../components/PageScreen/PageScreen';
 import { PageTransition } from '../../components/PageTransition/PageTransition';
-import { RedStripe } from '../../components/RedStripe/RedStripe';
+
 import { KeyHint } from '../../components/KeyHint/KeyHint';
 import { MenuRow } from './MenuRow';
 import { MENU_ITEMS } from '../../data/menu';
@@ -73,7 +73,6 @@ export default function Menu(): React.JSX.Element {
           ))}
         </nav>
 
-        <RedStripe />
         <KeyHint hints={KEY_HINTS} />
 
         <div className={styles.infoLine} aria-hidden="true">

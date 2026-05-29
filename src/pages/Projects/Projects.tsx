@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageScreen } from '../../components/PageScreen/PageScreen';
 import { PageTransition } from '../../components/PageTransition/PageTransition';
-import { RedStripe } from '../../components/RedStripe/RedStripe';
+
 import { KeyHint } from '../../components/KeyHint/KeyHint';
 import { ProjectCard } from './ProjectCard';
 import { PROJECTS } from '../../data/projects';
@@ -102,7 +102,6 @@ export default function Projects(): React.JSX.Element {
           </div>
         </div>
 
-        <RedStripe />
         <KeyHint hints={KEY_HINTS} />
       </PageScreen>
     </PageTransition>

@@ -6,6 +6,7 @@ export const ABOUT_SECTIONS: readonly AboutSection[] = [
     label: 'MY JOURNEY',
     roleTag: 'DEV',
     charIndex: 0,
+    portraitIndex: 0,
     content: [
       'Le Wagon Paris — full-stack bootcamp, early 2022',
       'OpenClassrooms React front-end apprenticeship — Oct 2022 to Oct 2024',
@@ -19,6 +20,7 @@ export const ABOUT_SECTIONS: readonly AboutSection[] = [
     label: 'MY CRAFT',
     roleTag: 'LEAD',
     charIndex: 1,
+    portraitIndex: 1,
     content: [
       'Onboarding lead for about a year — ramped up new teammates',
       'Strong code review culture — I give as much as I receive',
@@ -32,6 +34,7 @@ export const ABOUT_SECTIONS: readonly AboutSection[] = [
     label: 'OFF SCREEN',
     roleTag: 'DEV',
     charIndex: 2,
+    portraitIndex: 2,
     content: [
       'Gym — clears the head better than anything else',
       'Music production with Ableton Live',

@@ -53,4 +53,5 @@ export interface AboutSection {
   readonly content: readonly string[];
   readonly caption: string;
   readonly charIndex: number;
+  readonly portraitIndex: 0 | 1 | 2;
 }

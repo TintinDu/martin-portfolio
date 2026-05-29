@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PageScreen } from '../../components/PageScreen/PageScreen';
 import { PageTransition } from '../../components/PageTransition/PageTransition';
-import { RedStripe } from '../../components/RedStripe/RedStripe';
+
 import { KeyHint } from '../../components/KeyHint/KeyHint';
 import { SkillCard } from './SkillCard';
 import { SkillDetailPanel } from './SkillDetailPanel';
@@ -57,7 +57,6 @@ export default function Skills(): React.JSX.Element {
           </div>
         </div>
 
-        <RedStripe />
         <KeyHint hints={KEY_HINTS} />
       </PageScreen>
     </PageTransition>
