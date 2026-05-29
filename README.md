@@ -2,7 +2,7 @@
 
 Personal portfolio website for Martin Dubois Cousiño — full-stack developer.
 
-**[→ Live demo](https://martin-portfolio.vercel.app)** · [GitHub](https://github.com/TintinDu/martin-portfolio) · [LinkedIn](https://www.linkedin.com/in/martin-dubois-cousino-80196218a) · martindubois1602@gmail.com
+**[→ Live demo](https://martin-portfolio-mu.vercel.app)** · [GitHub](https://github.com/TintinDu/martin-portfolio) · [LinkedIn](https://www.linkedin.com/in/martin-dubois-cousino-80196218a) · martindubois1602@gmail.com
 
 Inspired by the UI of Persona 3 (JRPG): skewed clip-path panels, cyan/red palette, keyboard-driven navigation, and animated page transitions.
 
