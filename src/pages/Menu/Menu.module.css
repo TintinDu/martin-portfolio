@@ -9,7 +9,7 @@
   z-index: var(--z-overlay);
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(64px, 8vw, 108px);
+  font-size: clamp(40px, 8vw, 108px);
   line-height: 0.88;
   letter-spacing: 2px;
   color: rgba(60, 226, 255, 0.08);
@@ -28,13 +28,14 @@
 
 .nav {
   position: absolute;
-  left: 10vw;
+  left: 6vw;
   top: 50%;
   transform: translateY(-50%);
   z-index: var(--z-nav);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 90vw;
 }
 
 .navVisible {
@@ -46,16 +47,29 @@
   opacity: 0;
 }
 
-/* Bottom info line */
 .infoLine {
   position: absolute;
   bottom: 24px;
-  left: 10vw;
+  left: 6vw;
+  right: 40px;
   z-index: var(--z-footer);
   font-family: var(--font-condensed);
-  font-size: 12px;
-  letter-spacing: 4px;
+  font-size: 11px;
+  letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.28);
   text-transform: uppercase;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    left: 4vw;
+    top: 45%;
+  }
+
+  .infoLine {
+    font-size: 9px;
+    letter-spacing: 2px;
+    bottom: 16px;
+  }
 }

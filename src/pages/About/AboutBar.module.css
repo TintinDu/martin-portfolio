@@ -8,6 +8,24 @@
   transition: transform var(--timing-fast) var(--ease-spring);
 }
 
+@media (max-width: 768px) {
+  .bar {
+    min-height: 64px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .caption {
+    display: none;
+  }
+
+  .portrait {
+    width: 56px;
+  }
+}
+
 .bar:hover .inner,
 .bar[data-active='true'] .inner {
   background: #151520;

@@ -11,7 +11,7 @@ export function PageScreen({ children, videoSrc }: PageScreenProps): React.JSX.E
     <div style={{ position: 'fixed', inset: 0, overflow: 'hidden', background: '#000' }}>
       {videoSrc && (
         <video
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55, zIndex: 0 }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '75% center', opacity: 0.55, zIndex: 0 }}
           src={videoSrc}
           autoPlay
           loop

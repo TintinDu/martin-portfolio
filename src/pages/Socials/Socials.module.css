@@ -34,3 +34,21 @@
   align-items: center;
   overflow: hidden;
 }
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .left {
+    padding: 48px 4vw 16px;
+    justify-content: flex-start;
+  }
+
+  .right {
+    border-left: none;
+    border-top: 1px solid rgba(60, 226, 255, 0.1);
+    overflow-y: auto;
+  }
+}

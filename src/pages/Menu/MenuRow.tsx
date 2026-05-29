@@ -29,7 +29,7 @@ export function MenuRow({ item, active, onClick, onHover }: MenuRowProps): React
       <div className={styles.triangle} aria-hidden="true" />
       <span
         className={styles.label}
-        style={{ fontSize: `${item.fontSize}px` }}
+        style={{ fontSize: `clamp(28px, ${item.fontSize * 0.1}vw + 12px, ${item.fontSize}px)` }}
       >
         {item.label}
       </span>
